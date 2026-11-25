@@ -1,0 +1,13 @@
+title: ryuz4ki
+description: Writeups CTF, de la recon au root, avec la cause racine et le correctif.
+lang: fr
+url: https://ryuz4ki-sec.github.io
+baseurl: ""
+markdown: kramdown
+plugins:
+  - jekyll-feed
+permalink: /posts/:title/
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: "post" }
+exclude: [README.md, Gemfile]

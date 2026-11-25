@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="post-row-meta">
+      <span class="diff diff-{{ page.difficulty }}">{{ page.difficulty }}</span>
+      <span>{{ page.category }}</span>
+      <span>{{ page.event }}</span>
+      <span class="lang-tag">{{ page.lang | upcase }}</span>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+    </p>
+    {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  {% if page.tags.size > 0 %}<p class="post-tags">{% for t in page.tags %}<span>{{ t }}</span>{% endfor %}</p>{% endif %}
+  <p><a href="{{ '/' | relative_url }}">Retour aux writeups</a></p>
+</article>
